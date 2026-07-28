@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --surface: 0 0% 100%;
+  --surface-hover: 240 5% 96%;
+  --border: 240 6% 90%;
+  --foreground: 240 10% 4%;
+  --muted: 240 5% 96%;
+  --muted-foreground: 240 4% 46%;
+  --accent: 243 75% 59%;
+  --accent-foreground: 0 0% 100%;
+  --success: 152 60% 40%;
+  --danger: 0 72% 51%;
+  /* --font-sans / --font-mono are supplied by next/font via a class on <html> (see layout.tsx) */
+}
+
+.dark {
+  --background: 240 10% 6%;
+  --surface: 240 9% 9%;
+  --surface-hover: 240 8% 13%;
+  --border: 240 6% 17%;
+  --foreground: 0 0% 95%;
+  --muted: 240 8% 13%;
+  --muted-foreground: 240 5% 60%;
+  --accent: 243 82% 67%;
+  --accent-foreground: 0 0% 100%;
+  --success: 152 55% 45%;
+  --danger: 0 84% 63%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0px,
+    hsl(var(--surface-hover)) 40px,
+    hsl(var(--muted)) 80px
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
