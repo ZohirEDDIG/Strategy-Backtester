@@ -142,7 +142,7 @@ export default function HomePage() {
       <ConfirmDialog
         open={!!pendingDelete}
         title="Delete this backtest?"
-        description="This action can't be undone."
+        description="This action can&apos;t be undone."
         loading={deleteTrade.isPending}
         onConfirm={handleConfirmDelete}
         onCancel={() => setPendingDelete(null)}
