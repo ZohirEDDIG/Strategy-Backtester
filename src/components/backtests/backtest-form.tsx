@@ -271,7 +271,7 @@ export function BacktestForm({
             </Select>
             <FieldError message={errors.adherence?.message} />
             <p className="mt-1 text-xs text-muted-foreground">
-              Flags whether this result reflects the strategy's actual rules or a deviation from them.
+              Flags whether this result reflects the strategy&apos;s actual rules or a deviation from them.
             </p>
           </div>
           <div>
