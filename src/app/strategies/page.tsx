@@ -15,7 +15,7 @@ export default function StrategiesPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-semibold tracking-tight">Strategies</h1>
-          <p className="text-sm text-muted-foreground">Define what you're testing, then compare results across them.</p>
+          <p className="text-sm text-muted-foreground">Define what you&apos;re testing, then compare results across them.</p>
         </div>
         <Link href="/strategies/new">
           <Button size="sm">
